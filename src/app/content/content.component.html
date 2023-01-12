@@ -1,0 +1,84 @@
+<div class="content-box">
+  <div class="problem-details">
+    <img src="./../../assets/images/falcone.png" alt="falcone" />
+    <div class="text" *ngIf="!isQuestStarted && !showResults">
+      <p>
+        Queen Al Falcone is in hiding. She can be on anyone of the six planets
+        <b> DonLon, Enchai, Jebing, Sapir, Lerbin & Pingasor</b>. King Shan must find her however he
+        has limited resources at his disposal & can send army to only 4 of
+        these planets.His armies can reach planet by
+        <b> Space pod, Space Shuttle, Space rocket or Space ship</b>.
+      </p>
+      <p>Help King Shan in his quest.</p>
+      <div class="begin-btn"><button (click)="isQuestStarted = !isQuestStarted">Begin</button></div>
+    </div>
+    <div class="main-area" *ngIf="isQuestStarted && !showResults">
+      <div class="selection-text">Select 4 planets and the vehicles to reach there to find
+        <i>Queen falcone</i>:
+      </div>
+      <div class="select-area">
+        <div class="first-selection selection">
+          <label class="dest-label" for="DestOne">Destination 1</label>
+          <select type="text" class="auto-complete" [(ngModel)]="selectedDestinations[0]">
+            <option *ngFor="let planet of planets">{{planet.name}}</option>
+          </select>
+          <div *ngFor="let vehicle of vehicles">
+            <input type="radio" name="vehicle-one" id="{{vehicle?.name}}" value="{{vehicle?.name}}"
+              [(ngModel)]="selectedVehicles[0]" />
+            <label>{{vehicle?.name}}</label>
+          </div>
+        </div>
+        <div class="second-selection selection">
+          <label class="dest-label" for="DestTwo">Destination 2</label>
+          <select type="text" class="auto-complete" [(ngModel)]="selectedDestinations[1]">
+            <option *ngFor="let planet of planets">{{planet.name}}</option>
+          </select>
+          <div *ngFor="let vehicle of vehicles">
+            <input type="radio" name="vehicle-two" id="{{vehicle?.name}}" value="{{vehicle?.name}}"
+              [(ngModel)]="selectedVehicles[1]" />
+            <label>{{vehicle?.name}}</label>
+          </div>
+        </div>
+        <div class="third-selection selection">
+          <label class="dest-label" for="DestThree">Destination 3</label>
+          <select type="text" class="auto-complete" [(ngModel)]="selectedDestinations[2]">
+            <option *ngFor="let planet of planets">{{planet.name}}</option>
+          </select>
+          <div *ngFor="let vehicle of vehicles">
+            <input type="radio" name="vehicle-three" id="{{vehicle?.name}}" value="{{vehicle?.name}}"
+              [(ngModel)]="selectedVehicles[2]" />
+            <label>{{vehicle?.name}}</label>
+          </div>
+        </div>
+        <div class="fourth-selection selection">
+          <label class="dest-label" for="DestFour">Destination 4</label>
+          <select type="text" class="auto-complete" [(ngModel)]="selectedDestinations[3]">
+            <option *ngFor="let planet of planets">{{planet.name}}</option>
+          </select>
+          <div *ngFor="let vehicle of vehicles">
+            <input type="radio" name="vehicle-four" id="{{vehicle?.name}}" value="{{vehicle?.name}}"
+              [(ngModel)]="selectedVehicles[3]" />
+            <label>{{vehicle?.name}}</label>
+          </div>
+        </div>
+      </div>
+      <div class="time-taken"></div>
+      <div class="btn" (click)="findFalcone()"><button>Find Falcone</button></div>
+      <div class="result">
+        <div class="result-text"></div>
+      </div>
+    </div>
+    <div class="result-area" *ngIf="!isQuestStarted && showResults">
+      <div class="result-text" *ngIf="isResultSuccess">
+        <p>Success! Congratulations on Finding Falcone. King Shan is mighty pleased</p>
+        <br>
+        <p>Time taken : {{timeTaken}}</p>
+        <p>Planet found : {{this.result.planet_name}}</p>
+      </div>
+      <div class="result-text" *ngIf="!isResultSuccess">
+        Mission failed
+      </div>
+      <div class="btn"><button (click)="home()">Home</button></div>
+    </div>
+  </div>
+</div>

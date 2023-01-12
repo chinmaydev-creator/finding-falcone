@@ -1,0 +1,152 @@
+.content-box {
+  height: 540px;
+}
+
+.problem-details {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.problem-details img {
+  float: left;
+}
+
+.problem-details .text {
+  float: left;
+  width: 60%;
+  margin-left: 10px;
+  font-family: monospace;
+  font-size: 20px;
+  color: lightblue;
+}
+
+.problem-details .begin-btn{
+  width: fit-content;
+  margin: auto;
+}
+
+.problem-details .selection-text {
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.problem-details .text button {
+  text-align: center;
+  border: 1px double green;
+  line-height: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: white;
+  color: green;
+}
+
+.problem-details .text button:hover, .problem-details .text button:active {
+  background-color: green;
+  color: white;
+}
+
+.main-area {
+  float: left;
+  margin-left: 20px;
+}
+
+.selection{
+  float: left;
+  font-family: monospace;
+  margin-right: 30px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: gray;
+}
+.selection label {
+  display: block;
+}
+
+.dest-label{
+  font-weight: bold;
+}
+
+.selection input {
+  border: 1px solid lightblue;
+  line-height: 25px;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.btn{
+  width: fit-content;
+  margin: auto;
+}
+
+.btn button {
+  text-align: center;
+  border: 1px double white;
+  line-height: 40px;
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: grey;
+  color: white;
+
+}
+
+.btn button:hover, .find-falcone-btn button:active{
+  border: 1px double darkgrey;
+  color: grey;
+  background-color: white;
+}
+
+.selection input:focus{
+  border: 1px solid gray !important;
+  outline-color:gray !important;
+}
+
+@media screen and (max-width: 1205px) {
+  .content-box {
+    height: 1200px;
+  }
+
+  .problem-details .text{
+    margin-left: 15%;
+  }
+
+  .problem-details img {
+    margin-left: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .problem-details .text {
+    width: 80%;
+    margin-left: 5%;
+  }
+
+  .problem-details img {
+    margin-left: 15%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content-box {
+    height: 2000px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .problem-details .text {
+    margin-left: 2%;
+  }
+
+  .problem-details img {
+    margin: 5%;
+  }
+
+}
