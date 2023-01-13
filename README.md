@@ -1,4 +1,5 @@
 # FindingFalcone
+![Untitled design (1)](https://user-images.githubusercontent.com/57745687/212220653-6bb85fbf-87d1-4589-bc4a-a21f97ab6127.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
@@ -25,4 +26,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-![Untitled design](https://user-images.githubusercontent.com/57745687/212220013-b2738072-46d8-4287-92e1-2fcacf532aa8.gif)
